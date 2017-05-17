@@ -7,7 +7,7 @@
     <Description>Includes types that provide support for SecurityTokens, Cryptographic operations: Signing, Verifying Signatures, Encryption.</Description>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <PackageId>Microsoft.IdentityModel.Tokens</PackageId>
-    <TargetFrameworks>netstandard1.4;net451</TargetFrameworks>
+    <TargetFrameworks>netstandard1.4;net451;netcoreapp2.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +16,10 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+      <PackageReference Include="NETStandard.Library" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
