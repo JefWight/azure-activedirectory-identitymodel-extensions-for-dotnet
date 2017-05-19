@@ -1,7 +1,7 @@
 param(
     [string]$build="YES",
     [string]$buildType="Debug",
-    [string]$dotnetDir="c:\dotnet.1.0.3",
+    [string]$dotnetDir="C:\Program Files\dotnet",
     [string]$clean="YES",
     [string]$restore="YES",
     [string]$root=$PSScriptRoot,
@@ -151,7 +151,8 @@ if ($pack -eq "YES")
     }
 
     $projects = $buildConfiguration.SelectNodes("root/projects/src/project");
-    foreach($project in $projects) {
+    foreach($project in $projects)
+    {
         $name = $project.name;
         Write-Host "======================"
         Write-Host ">>> Start-Process -wait -NoNewWindow $dotnetexe 'pack' --no-build $root\src\$name -c $buildType -o $artifactsRoot -s"
@@ -168,7 +169,8 @@ if ($runTests -eq "YES")
 	Write-Host ""
 
     $testProjects = $buildConfiguration.SelectNodes("root/projects/test/project")
-    foreach ($testProject in $testProjects) {
+    foreach ($testProject in $testProjects)
+    {
         $name = $testProject.name;
         Write-Host "";
         Write-Host ">>> Set-Location $root\test\$name"
@@ -196,6 +198,7 @@ if ($runTests -eq "YES")
         $testExitCode = $p.ExitCode + $testExitCode
         popd
     }
+
     if($testExitCode -ne 0)
     {
         Write-Host ""
