@@ -5,6 +5,7 @@
   <PropertyGroup>
     <Copyright>Copyright (c) Microsoft Corporation. All rights reserved.</Copyright>
     <DelaySign>false</DelaySign>
+    <DotNet20RuntimeVersion>2.0.0-preview2-25301-07</DotNet20RuntimeVersion>
     <OutputTypeEx>library</OutputTypeEx>
     <Product>Microsoft IdentityModel</Product>
     <RepositoryType>git</RepositoryType>

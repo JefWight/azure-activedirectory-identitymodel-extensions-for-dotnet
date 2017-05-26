@@ -8,8 +8,7 @@
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <PackageId>Microsoft.IdentityModel.Logging.Tests</PackageId>
     <TargetFrameworks>net452;netcoreapp2.0</TargetFrameworks>
-    <RuntimeFrameworkVersion Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">2.0.0-preview2-25317-03</RuntimeFrameworkVersion>
-    <PackagingToolsInsufficientSDKVersion>false</PackagingToolsInsufficientSDKVersion>
+    <RuntimeFrameworkVersion Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">$(DotNet20RuntimeVersion)</RuntimeFrameworkVersion>
   </PropertyGroup>
 
   <ItemGroup>

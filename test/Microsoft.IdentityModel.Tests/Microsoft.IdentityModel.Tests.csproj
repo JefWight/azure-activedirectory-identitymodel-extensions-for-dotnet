@@ -7,9 +7,8 @@
     <Description>Contains test utilities and data that are shared across Microsoft.IdentityModel.xys.Tests</Description>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <PackageId>Microsoft.IdentityModel.Tests</PackageId>
-    <TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
-    <RuntimeFrameworkVersion Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">2.0.0-preview2-25317-03</RuntimeFrameworkVersion>
-    <PackagingToolsInsufficientSDKVersion>false</PackagingToolsInsufficientSDKVersion>
+    <TargetFrameworks>net452;netcoreapp2.0</TargetFrameworks>
+    <RuntimeFrameworkVersion Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">$(DotNet20RuntimeVersion)</RuntimeFrameworkVersion>
   </PropertyGroup>
 
   <ItemGroup>
